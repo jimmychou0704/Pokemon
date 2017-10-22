@@ -6,7 +6,7 @@ computer an image that is **NOT** in the previous 700 training images. We then c
 computer generate the missing part. The following are some figures I picked randomly. From left to right are
 
 
-orginal image -> covered 50% -> generative image respectively.
+orginal image -> covered 50% -> generated image.
 
 
 
@@ -27,7 +27,7 @@ It is exactly the same as language model. Here each image is 20x20, so we can th
 Then we can decide the sentence length (we picked 40). We want to train the algorithm so that once 40 pixels have been 
 parsed, it can predict the color of the next pixel. To achieve so, we let the first 40 pixel be training features, and the 41th pixel to be the label. The set (1,2,...,40 | 41) is a data point. The next data point is (2,3,...41 | 42) so on and so forth. For 700 images, we have 251300 data points.  
 
-#### Possible Improvement
+#### Possible Improvements
 1. Here we only consider the relation of pixels in horrizontal direction. There are some other directions should be crucial, 
 such as vertical or diagonal direction. I guess this is the idea of pixel RNN. It will be interesting to see how much pixel RNN will outperforme this simple RNN model.
 
